@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../screens/citas/cita_page.dart';
 import '../../screens/servicios/servicios_page.dart';
 import '../../screens/productos/productos_page.dart';
+import '../../screens/atencion_cliente_page.dart';
 
 void main() {
   runApp(MyApp());
@@ -65,6 +66,19 @@ class HomePage extends StatelessWidget {
               Navigator.push(
                 context,
                 MaterialPageRoute(builder: (_) => ProductosPage()),
+              );
+            },
+          ),
+          SizedBox(height: 20),
+
+          _buildCard(
+            title: "Atención al Cliente",
+            icon: Icons.support_agent,
+            color: Colors.purple,
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => AtencionClientePage()),
               );
             },
           ),
